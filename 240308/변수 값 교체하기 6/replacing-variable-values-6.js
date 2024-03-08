@@ -1,4 +1,4 @@
-let [a, b] = [2, 5]
+let [a, b] = [2, 5];
 [a, b] = [b, a]
 console.log(`${a}
 ${b}`)
