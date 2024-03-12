@@ -9,4 +9,4 @@ let c = Number(input[2])
 
 
 
-console.log(a+b+c+"\n"+(a+b+c)/3)
+console.log(a+b+c+"\n"+parseInt((a+b+c)/3))
