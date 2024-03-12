@@ -1,9 +1,7 @@
-const fs = require('fs');
+// 입력 및 변수 선언
+const fs = require("fs");
+let n = Number(fs.readFileSync(0).toString().trim());
 
-let input = fs.readFileSync(0).toString().trim()
-
-let a = Number(input[0])
-
-if (a<0) {
-    console.log(a+"\n"+"minus")
-} else { console.log(a)}
+// 출력
+console.log(n);
+if (n < 0) console.log("minus");
