@@ -8,4 +8,4 @@ let b = Number(n[1])
 
 if (a>b) {
     console.log(a*b)
-} else {Number(parseInt(b/a))}
+} else {console.log(parseInt(b/a))}
