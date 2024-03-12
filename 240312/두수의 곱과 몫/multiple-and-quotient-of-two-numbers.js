@@ -5,4 +5,4 @@ let input = fs.readFileSync(0).toString().trim().split(" ");
 let [a, b] = input.map(Number)
 
 console.log(`${a} * ${b} = ${a*b}
-${a} / ${b} = ${(a/b).toFixed(0)}`)
+${a} / ${b} = ${parseInt(a/b)}`)
