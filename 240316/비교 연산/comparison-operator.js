@@ -7,30 +7,30 @@ let b = input[1];
 if (a>=b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
 if (a>b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
 if (a<=b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
 if (a<b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
 if (a===b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
 if (a!==b) {
     console.log(1)
 } else {
-    console.log(2)
+    console.log(0)
 }
