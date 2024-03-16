@@ -18,5 +18,5 @@ else if (input === 'D') {
     console.log("Effort");
 }
 else {
-    console.log("EfFailure");
+    console.log("Failure");
 }
