@@ -1,39 +1,32 @@
-function processCommand(array, command) {
-    const [operation, value] = command.split(' ');
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    switch (operation) {
-        case 'push_back':
-            array.push(parseInt(value));
-            break;
-        case 'pop_back':
-            array.pop();
-            break;
-        case 'size':
-            console.log(array.length);
-            break;
-        case 'get':
-            console.log(array[parseInt(value) - 1]);
-            break;
+let input = [];
+let arr = [];
+
+rl.on('line', function(line) {
+    input.push(line);
+}).on('close', function() {
+    const n = parseInt(input[0]);
+    for(let i = 1; i <= n; i++) {
+        const command = input[i].split(' ');
+        switch(command[0]) {
+            case 'push_back':
+                arr.push(parseInt(command[1]));
+                break;
+            case 'pop_back':
+                arr.pop();
+                break;
+            case 'size':
+                console.log(arr.length);
+                break;
+            case 'get':
+                console.log(arr[parseInt(command[1])-1]);
+                break;
+        }
     }
-}
-
-function processCommands(commands) {
-    const array = [];
-    for (let command of commands) {
-        processCommand(array, command);
-    }
-}
-
-
-const commands = [
-    'push_back 10',
-    'push_back 20',
-    'get 1',
-    'get 2',
-    'size',
-    'pop_back',
-    'size',
-    'get 1',
-    'size'
-];
-processCommands(commands);
+    process.exit();
+});
