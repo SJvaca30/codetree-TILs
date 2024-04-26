@@ -16,3 +16,24 @@ function processCommand(array, command) {
             break;
     }
 }
+
+function processCommands(commands) {
+    const array = [];
+    for (let command of commands) {
+        processCommand(array, command);
+    }
+}
+
+
+const commands = [
+    'push_back 10',
+    'push_back 20',
+    'get 1',
+    'get 2',
+    'size',
+    'pop_back',
+    'size',
+    'get 1',
+    'size'
+];
+processCommands(commands);
