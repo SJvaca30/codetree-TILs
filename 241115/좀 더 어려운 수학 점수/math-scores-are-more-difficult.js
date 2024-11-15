@@ -1,15 +1,10 @@
 const fs = require("fs");
-let input = fs
+const [[mathA, engA], [mathB, engB]] = fs
   .readFileSync("/dev/stdin")
   .toString()
   .trim()
   .split("\n")
-  .map((i)=> i.split(" "));
-
-let mathA = input[0][0]
-let engA = input[0][1]
-let mathB = input[1][0]
-let engB = input[1][1]
+  .map(line => line.split(" ").map(Number));
 
 const result = 
   (mathA > mathB && "A") ||
