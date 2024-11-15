@@ -2,13 +2,10 @@ const fs = require("fs");
 let input = Number(fs.readFileSync("/dev/stdin").toString().trim())
 
 const getSeason = (month) => {
-  const seasons = {
-    3: 'Spring', 4: 'Spring', 5: 'Spring',
-    6: 'Summer', 7: 'Summer', 8: 'Summer',
-    9: 'Fall', 10: 'Fall', 11: 'Fall',
-    12: 'Winter', 1: 'Winter', 2: 'Winter'
-  };
-  return seasons[month];
+  return (month >= 3 && month <= 5 && 'Spring') ||
+         (month >= 6 && month <= 8 && 'Summer') ||
+         (month >= 9 && month <= 11 && 'Fall') ||
+         'Winter';
 }
 
 console.log(getSeason(input))
