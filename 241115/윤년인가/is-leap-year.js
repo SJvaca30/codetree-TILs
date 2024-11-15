@@ -6,6 +6,7 @@ let input = Number(fs
 
 
 let result = (
+    (input % 100 === 0) && (input % 400 !== 0) && "true" ||
     input % 4 === 0 && "true" ||
     "false"
 )
