@@ -13,6 +13,6 @@ let [[firstAge, firstSex], [secAge, secSex]] = fs
 const result =
 (firstAge >= 19 && firstSex === "M" && 1) ||
 (secAge >= 19 && secSex === "M" && 1) ||
-2;
+0;
 
 console.log(result)
