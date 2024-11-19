@@ -9,7 +9,17 @@ let input = fs
 let a = input[0];
 let b = input[1];
 
-// 나눗셈 결과를 문자열로 변환하고 소수점 20자리까지 표시
-let result = (a / b).toFixed(20);
+let result = (a / b).toString();
+
+let index = result.indexOf('.');
+
+if (index === -1) {
+    result += '.';
+    index = result.length - 1;
+}
+
+while (result.length - index - 1 < 20) {
+    result += '0';
+}
 
 console.log(result);
