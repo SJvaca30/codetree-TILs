@@ -9,17 +9,5 @@ let input = fs
 let a = input[0];
 let b = input[1];
 
-let result = (a / b).toString();
-
-let index = result.indexOf('.');
-
-if (index === -1) {
-    result += '.';
-    index = result.length - 1;
-}
-
-while (result.length - index - 1 < 20) {
-    result += '0';
-}
-
-console.log(result);
+let result = (BigInt(a) * BigInt(10**20)) / BigInt(b);
+console.log(`${String(result).padStart(21, '0').slice(0, -20)}.${String(result).padStart(21, '0').slice(-20)}`);
