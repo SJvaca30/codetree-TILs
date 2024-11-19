@@ -8,7 +8,7 @@ let input = Number(fs
   let result = [];
   let i = 17;
 
-  while (i > 5) {
+  while (i >= 5) {
     result.push(i)
     i--
   }
