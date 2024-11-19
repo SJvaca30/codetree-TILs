@@ -2,16 +2,14 @@ const fs = require("fs");
 let input = Number(fs
   .readFileSync("/dev/stdin")
   .toString()
-  .trim())
+  .trim());
 
-  let result = [];
-  let i = 1
+let result = [];
+let i = 1;
 
-  while (true) {
-    result.push(i*3)
-    i++
-    if (result[result.length - 1] >= input )break;
-    
-  }
+while (i * 3 <= input) {
+    result.push(i * 3);
+    i++;
+}
 
-  console.log(result.join(" "))
+console.log(result.join(" "));
