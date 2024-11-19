@@ -9,7 +9,7 @@ let input = Number(fs
 //   let i = 1;
 
   while (input >= 1) {
-    result.push(inout)
+    result.push(input)
     input--
   }
 
