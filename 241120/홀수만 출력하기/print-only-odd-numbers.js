@@ -8,7 +8,7 @@ let input = fs
 
 
 
-let numbers = input.slice(1); 
-let result = numbers.filter(i=> i%3===0 && i%2!==0)
+input.shift()
+let result = input.filter(i=> i%3===0 && i%2!==0)
 
 console.log(result.join('\n'))
