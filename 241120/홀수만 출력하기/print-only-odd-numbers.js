@@ -9,11 +9,9 @@ let input = fs
 
 
 
-let result = input.filter(i=> {
-    if(i%3===0 && i%2!==0 ){
-    return i
-    }
-    }
+let result = input.filter(i=> 
+    i%3===0 && i%2!==0
+    
 )
 
 console.log(result.join('\n'))
