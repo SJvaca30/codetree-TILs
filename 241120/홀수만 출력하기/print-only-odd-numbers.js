@@ -5,10 +5,10 @@ let input = fs
   .trim()
   .split("\n")
   .map(Number)
+  .shift()
 
 
 
-input.shift()
 let result = input.filter(i=> i%3===0 && i%2!==0)
 
 console.log(result.join('\n'))
