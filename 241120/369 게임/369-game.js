@@ -8,7 +8,7 @@ let i = 1;
 let result = [];
 
 while ( i <= a) {
-    (i % 3 === 0 || String(i).includes("3"||"6"||"9")) && 
+    (i % 3 === 0 || ["3", "6", "9"].some(num => String(i).includes(num))) && 
     result.push(0) ||
     result.push(i)
     i++
