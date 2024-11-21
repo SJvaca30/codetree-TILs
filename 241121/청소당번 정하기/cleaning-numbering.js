@@ -10,14 +10,10 @@ let c = 0;
 
 let i = 1;
 while ( i <= input){
-    if (i % 12 === 0) {
-        c++;
-    } else if (i % 3 === 0) {
-        b++;
-    } else if (i % 2 === 0) {
-        a++;
-    }
-    i++;
+    i%12 === 0 && ++c ||
+    i%3 === 0 && ++b ||
+    i%2 === 0 && ++a;
+    i++
 }
 
 console.log(a+' '+b+' '+c)
