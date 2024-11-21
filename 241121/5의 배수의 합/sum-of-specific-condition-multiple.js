@@ -6,6 +6,10 @@ let [a, b] = fs
   .split(' ')
   .map(Number)
 
+if ( a<b){
+    [b,a] = [a,b]
+}
+
 let result = 0;
 
 while ( a<=b){
