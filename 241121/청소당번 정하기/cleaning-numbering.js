@@ -13,6 +13,7 @@ while ( i <= input){
     i%12 === 0 && c++ ||
     i%3 === 0 && b++ ||
     i%2 === 0 && a++;
+    console.log(i, b)
     i++
 }
 
