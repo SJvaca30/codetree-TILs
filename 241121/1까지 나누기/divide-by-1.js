@@ -8,8 +8,8 @@ let N = input;
 let i = 1;
 
 while (true){
-  if(input/i <= 1) break;
-  input = parseInt(input/i)
+  if(N/i <= 1) break;
+  N = parseInt(N/i)
   
   i++
 }
