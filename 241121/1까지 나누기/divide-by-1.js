@@ -4,10 +4,10 @@ let input= Number(fs
   .toString()
   .trim())
 
-let result = input
+let N = input;
 let i = 1;
 
-while ( i <= result){
+while (true){
   if(input/i <= 1) break;
   input = parseInt(input/i)
   
