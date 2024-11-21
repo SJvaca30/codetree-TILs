@@ -3,16 +3,15 @@ let [a, b] = fs
   .readFileSync("/dev/stdin")
   .toString()
   .trim()
-  .split('\n')
+  .split(' ')
   .map(Number)
 
-let [result, avg] = [0, []];
+let result = 0;
 
 while ( a <= b){
     if ( a%6===0 && a%8!==0){
         result+=a
     }
-    
     a++
 }
 
