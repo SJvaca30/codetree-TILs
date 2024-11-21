@@ -4,13 +4,12 @@ let input = Number(fs
   .toString()
   .trim())
 
-let num = input; 
-let i = 1;
+let num = input;
+let count = 0;
 
-while (true) {
-  if (num / i <= 1) break;
-  num = Math.floor(num / i); 
-  i++;
+while (num > 1) { 
+    count++;
+    num = Math.floor(num / count); 
 }
 
-console.log(i);
+console.log(count);
