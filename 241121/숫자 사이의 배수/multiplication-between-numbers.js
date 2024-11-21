@@ -1,21 +1,21 @@
 const fs = require("fs");
-let [a, b] = fs
+const [start, end] = fs
   .readFileSync("/dev/stdin")
   .toString()
   .trim()
   .split(' ')
-  .map(Number)
+  .map(Number);
 
-let [c, d] = [0, []];
+const numbers = [];
+let sum = 0;
 
-while ( a <= b){
-   (a%5===0 || a%7===0) && (c+=a) && d.push(a);
-    a++
+for (let i = start; i <= end; i++) {
+  if (i % 5 === 0 || i % 7 === 0) {
+    numbers.push(i);
+    sum += i;
+  }
 }
 
-let avg = 0;
-d.forEach(i => avg+=i )
+const average = numbers.length ? (sum / numbers.length).toFixed(1) : 0;
 
-console.log(c, (avg/(d.length)).toFixed(1) )
-
-
+console.log(sum, average);
