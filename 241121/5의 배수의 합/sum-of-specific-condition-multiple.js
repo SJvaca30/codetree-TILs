@@ -6,7 +6,7 @@ let [a, b] = fs
   .split(' ')
   .map(Number)
 
-if ( a<b){
+if ( a>b){
     [b,a] = [a,b]
 }
 
