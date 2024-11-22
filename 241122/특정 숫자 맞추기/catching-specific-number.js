@@ -8,12 +8,11 @@ let input= fs
 
 
 let index = 0;
-let number = input[index];
 let result =[];
 
 
 while (true) {
-    number = input[index];
+    let number = input[index];
     if(number < 25){
         result.push("Higher")
     }
