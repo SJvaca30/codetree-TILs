@@ -6,15 +6,15 @@ let input= fs
   .split('\n')
   .map(Number)
 
-let result = [];
+let result = 0
 let num = 0;
 
-result = input.reduce((acc,i) => {
-    if (i<30){
-        num++
-        return acc+i
+for( let i = 0; i < input.length; i++){
+    if (input[i] >= 30){
+        break;
     }
-    return acc;
-},0)
+    result += input[i]
+    num++
+}
 
 console.log((result/num).toFixed(2))
