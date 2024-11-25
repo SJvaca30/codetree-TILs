@@ -6,11 +6,12 @@ let input= fs
   .split('\n')
   .map(Number)
 
+
 let result = 0
 let num = 0;
 
 for( let i = 0; i < input.length; i++){
-    if (input[i] >= 30){
+    if (input[i] >= 30 || input[i] < 20 ){
         break;
     }
     result += input[i]
