@@ -4,10 +4,9 @@ let input= Number(fs
   .toString()
   .trim())
 
-let temp = 0;
 let result = 0;
-while(temp !== 2) {
-  temp = input/2;
+while(input !== 2) {
+  input = input/2;
   result+=2;
 }
 
