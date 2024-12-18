@@ -7,14 +7,10 @@ let input= Number(fs
 let result = 0;
 
 
-if ( input <= 1000 && input%2===0 ) {
-    input = (input*3)+1;
-}
-
 while (input <= 1000) {
     input%2===0 ? input = (input*3)+1 : input = (input*2)+2;
     result++
 }
 
 
-console.log(result+1)
+console.log(result)
