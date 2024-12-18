@@ -1,13 +1,17 @@
-const fs = require("fs");
-let input= Number(fs
-  .readFileSync("/dev/stdin")
-  .toString()
-  .trim())
 
-let result = 0;
-while(input !== 2) {
-  input = input/2;
-  result+=2;
+const fs = require("fs");
+let n = Number(fs.readFileSync(0).toString().trim());
+let cnt = 1;
+let prod = 2;
+
+while (true) {
+
+    if (prod === n) {
+        break;
+    }    
+    
+    prod *= 2;
+    cnt++;
 }
 
-console.log(result)
+console.log(cnt);
